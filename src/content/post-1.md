@@ -1,8 +1,8 @@
 ---
-title: Comment faire du React.js ?
-date: 2020-03-01
+title: 'Comment faire du React.js ?'
+date: '2020-03-01'
 tag: JavaScript
-img: "../uploads/image-1.jpeg"
+img: '../uploads/image-1.jpeg'
 
 ---
 import ColorRed from '../components/color.js'
