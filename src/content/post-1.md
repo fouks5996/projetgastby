@@ -1,5 +1,5 @@
 ---
-title: Comment faire caca ?
+title: 'Comment faire '
 date: 2020-03-01
 tag: JavaScript
 img: "../uploads/image-1.jpeg"
