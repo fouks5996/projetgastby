@@ -71,7 +71,7 @@ nous associons la page qui vient d'être créée au template des posts existants
       })
     })
 
-    const perPage = 2;
+    const perPage = 4;
     const nbPage = Math.ceil(data.allMdx.totalCount / perPage)
 
     for (let i =0; i < nbPage; i++) {

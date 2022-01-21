@@ -11,9 +11,7 @@ const IndexPage = () => (
 
     <Hero> </Hero>
 
-    <h1> k,ckd,ckcd</h1>
-    <h1> k,ckd,ckcd</h1>
-    <h1> k,ckd,ckcd</h1>
+
   </Layout>
 )
 
