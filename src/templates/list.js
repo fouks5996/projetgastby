@@ -9,9 +9,10 @@ import Img from "gatsby-image"
 const Titlemain = styled.h1`
   color: black;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 78px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 `
 const Styledlink = styled(Link)`
     text-decoration: underline;
@@ -72,7 +73,12 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <Seo title="bloghome" />
-            <Titlemain> Liste des posts </Titlemain>
+            <Titlemain> Liste des posts</Titlemain>
+            <div  
+              style={{
+                fontSize:`1.3vw`,
+                marginBottom:`20px`,
+                      }}> {pageInfo.totalCount} articles </div>
             {nodes.map( e => (
                 <Listwrap>
                     <Img  
@@ -96,6 +102,12 @@ const IndexPage = ({ data }) => {
                 </Listwrap>
             ))}
             <Stylepage>
+            <div
+              style={{
+                fontSize: `1.2vw`,
+                marginRight:`20px`,
+                    }}
+                > Page {pageInfo.currentPage} </div>
               {pageInfo.hasPreviousPage ? (
                 <PreviousNext to={`${pageInfo.currentPage === 2 ? "/blog" : `/blog/${pageInfo.currentPage - 1}`}`}>  
                   Page précédente 
@@ -106,6 +118,8 @@ const IndexPage = ({ data }) => {
               {pageInfo.hasNextPage && (
                     <PreviousNext to={`/blog/${pageInfo.currentPage + 1}`}> Page suivante  </PreviousNext>
               )}
+
+              
             </Stylepage>    
         </Layout>
     )
@@ -144,6 +158,7 @@ query getPosts ($skip: Int!, $limit: Int!) {
           itemCount
           pageCount
           perPage
+          totalCount
         }
       }
     }
